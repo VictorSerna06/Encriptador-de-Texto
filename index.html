@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Encriptador de Texto</title>
+</head>
+<body>
+    <header>
+        <nav class="contenedor-imagenes">
+            <img class="icono" src="img/icono-alura.jpg" alt="icono alura">
+            <img class="imagen" src="img/imagen-alura.png" alt="imagen alura">
+        </nav>
+        <div class="encabezado">
+            <h1 class="titulo">Encriptador de texto</h1>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="contenido">
+                <textarea id="textoUsuario" class="texto" onkeydown="cancelarSalto(event);" onclick="letrasMayusculas('textoUsuario');" placeholder="INGRESA EL TEXTO, NO SE ACEPTAN LETRAS MAYUSCULAS"></textarea>
+            </div>  
+            <div class="contenido">
+                <textarea id="resultado" class="texto-resultado" placeholder="RESULTADO"></textarea>
+            </div>
+        </section>
+        <div class="botones">
+            <button class="boton" onclick="encriptar();">
+                    Encriptar
+            </button>
+            <button class="boton" onclick="desencriptar();">
+                    Desencriptar
+            </button>
+            <button id="copiar" class="botonCopiar" onclick="copiarContenido();" disabled>
+                    Copiar Texto
+            </button>
+        </div>
+        <div id="mensaje" class="mensaje" style="display: none;">Texto copiado en el portapapeles</div>
+    </main>
+    <footer>
+        <p class="copyright">&copy Copyright 2024 / 
+            <a href="https://github.com/VictorSerna06" target="_blank">
+                <img class="github" src="img/github.jpg" alt="imagen github">
+                VictorSerna06
+            </a>
+        </p>
+    </footer>
+    <script src="app.js" defer></script>
+</body>
+</html>
